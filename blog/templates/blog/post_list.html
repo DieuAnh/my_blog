@@ -5,10 +5,10 @@
     <title></title>
   </head>
   <body>
-      <h1><a href="">Here are my posts</a></h1>
+      <h1><a href="">Here are my posts hahhahahaha</a></h1>
       {% for post in posts %}
         <p>{{ post.published_date }}</p>
-        <p><a href="">{{ post.title }}</a></p>
+        <p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
         <p>{{ post.text }}</p>
       {% endfor %}
   </body>
