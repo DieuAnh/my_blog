@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-import django_heroku
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog'
+    'herokuapp'
 ]
 
 MIDDLEWARE = [
@@ -111,7 +112,7 @@ TIME_ZONE = 'Europe/Paris'
 USE_I18N = True
 
 USE_L10N = True
-
+-
 USE_TZ = True
 
 
@@ -119,4 +120,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
