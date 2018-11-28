@@ -1,15 +1,28 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-      <h1><a href="">Here are my posts hahhahahaha</a></h1>
-      {% for post in posts %}
+      <h1><a href="">Here are my posts hahhahahaha</a></h1> -->
+{% extends 'blog/base.html' %}
+      <!-- {% for post in posts %}
         <p>{{ post.published_date }}</p>
         <p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
         <p>{{ post.text }}</p>
-      {% endfor %}
-  </body>
-</html>
+      {% endfor %} -->
+{% block content %}
+  {% for post in posts %}
+    <div class="post">
+      <div class="date">
+        <p>Published: {{ post.published_date }}</p>
+      </div>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+  <!-- </body>
+</html> -->
