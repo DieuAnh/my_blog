@@ -1,14 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {% if post.published_date %}
-      <div>
-          {{ post.published_date }} -->
-{% extends 'blog/base.html'}
+
+{% extends 'blog/base.html' %}
 
 {% block content %}
   <div class="post">
@@ -23,10 +14,4 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.text|linebreaksbr }}</p>
   </div>
-      <!-- </div>
-    {% endif %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.text|linebreaksbr }}</p>
-  </body>
-</html> -->
 {% endblock %}
