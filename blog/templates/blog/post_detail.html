@@ -9,6 +9,8 @@
         {{ post.published_date }}
 
       </div>
+    {% else %}
+      <a href="{% url 'post_published' pk=post.pk %}" class="btn btn-primary">Publish</a>
     {% endif %}
 
     {% if user.is_authenticated %}
